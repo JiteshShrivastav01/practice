@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurants</title>
+</head>
+<body>
+    <div id="order">
+    <header>Order </header>
+    <hr style="color:Red;border: 2px solid red;width:40%;align-self: center;margin-top: 1px;">
+        <label for="">Dish&nbsp;&nbsp;:
+            <select name="" id="dish">
+                <option value="Chicken Briyani">Chicken Briyani</option><hr>
+                <option value="Mutton Briyani">Mutton Briyani</option><hr>
+                <option value="Tandori Briyani">Tandori Briyani</option>
+            </select>
+        </label>
+        <label for="">Price :
+            <input type="number" id="price">
+        </label>
+        <label for="">Table :
+           <select name="" id="table">
+            <option value="table1">Table1</option><hr>
+            <option value="table2">Table2</option><hr>
+            <option value="table3">Table3</option>
+           </select>
+        </label>
+        <input id="btn" type="button" value="Add Order" onclick="savetoCrudCrud(event)">
+    </div>
+    <hr>
+    <br>
+        <ul id="table1">Table 1 :</ul><br>
+        <ul id="table2">Table 2 :</ul><br>
+        <ul id="table3">Table 3 :</ul>
+    
+
+    </ul>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+    <script src="restraunts.js"></script>
+</body>
+<style>
+    
+    #order{height:auto;width:350px;margin: 10px 30% 10px 30%;display: flex;flex-direction: column;border: 2px solid black;background-color: aqua;font-weight: 600;border-radius: 10px;margin-bottom: 20px;margin-top: 20px;}
+    label{margin: 5px;margin-left: 40px;}
+    header{text-align: center;font-size: 30px;color: red;}
+    input{margin:3px;padding: 2px;width:200px}
+    select{margin:3px;padding: 4px;width:207px;border-bottom: 1px solid black;}
+    #btn{margin:10px;padding: 4px;width:207px;align-self: center;color:white;background-color: black;font-weight: 600;}
+    ul{font-size: 15px;font-weight: 550;margin: 5px;}
+    li{font-size: 15px;font-weight: 500;list-style-type: none;}
+    #btn2{margin:5px;padding: 4px;width:auto;align-self: center;color:white;background-color: black;}
+    
+</style>
+</html>
