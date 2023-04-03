@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body>
+    <div id="form">
+    <header>Login</header><hr id="header">
+    <input type="email" placeholder="Email" id="email"><br>
+    <input type="password" placeholder="password" id="password"><br>
+    <input type="button" value="Login" onclick="next(event)" id="submit">
+    <a href="" id="login" style="color:green"></a>
+    <hr>
+    <a href="R.html">Create new account</a>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+<script>
+    function next(event){
+        const email=document.getElementById('email').value
+        const password=document.getElementById('password').value
+        const user={email,password}
+        const data=axios.get('https://crudcrud.com/api/53e6cdcafae1463894632a889a0bffcd/registration')
+        .then((res)=>{
+            var c=0
+            for(let i=0;i<res.data.length;i++){
+                if(res.data[i].email===user.email && res.data[i].password===user.password){
+                    const parent=document.getElementById('login')
+                    parent.innerHTML=parent.innerHTML + 'Sucessfully logged In. <br> <a href="next.html">Click here</a>'
+                    parent.style.color='green'
+                    c=1
+                }
+            }
+            if(c==0){
+                const parent=document.getElementById('login')
+                parent.style.color='red'
+                parent.innerHTML='Please enter valid username and password' 
+            }
+        })
+        .catch((err)=>{
+            const parent=document.getElementById('login')
+            parent.style.color='red'
+            parent.innerHTML='Please enter valid username and password'
+        })
+    }
+</script>
+<style>
+#form{background-color: grey;
+    width: 20%;height:auto;margin: 20px 40% 20px 40%;padding: 15px;border: 2px solid black;border-radius: 10px;display: flex;flex-direction: column;}
+input{margin-left:6px;font-weight:500;width: 220px;height: 20px;border: 1px solid black;border-radius: 3px;align-self: center;}
+#submit{align-self: center;border-radius: 6px;background-color: black;margin: 3px;padding:5px;margin-bottom: 10px;text-align: center;width:150px;height: 30px;font-size: 15px;color: white;}
+header{font-size: 30px;text-align: center;color: black;margin: 5px 0px 1px 0px;}
+#header{border: 1px solid black;width: 30%;align-self: center;margin-bottom: 15px;}
+hr{border: 1px solid black;width: 95%;align-self: center;margin: 2px;margin-bottom: 8px;}
+a{font-size: 20px;color: black;align-self:center;}
+</style>
+</html>

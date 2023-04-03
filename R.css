@@ -1,0 +1,10 @@
+
+#form{background-color: grey;
+    width: 30%;height:auto;margin: 20px 35% 20px 35%;padding: 15px;border: 2px solid black;border-radius: 10px;display: flex;flex-direction: column;}
+label{margin-left: 5px;display: flex;font-weight: 500;font-size: 20px;color: black;}
+input{margin-left:6px;font-weight:500;width: 220px;height: 20px;border: 1px solid black;border-radius: 3px;}
+#submit{align-self: center;border-radius: 6px;background-color: black;margin: 5px;padding:5px;margin-bottom: 10px;text-align: center;width:150px;height: 30px;font-size: 15px;color: white;}
+header{font-size: 30px;text-align: center;color: black;margin: 5px 0px 1px 0px;}
+#header{border: 1px solid black;width: 80%;align-self: center;margin-bottom: 15px;}
+hr{border: 1px solid black;width: 95%;align-self: center;margin: 2px;margin-bottom: 8px;}
+a{font-size: 20px;color: black;align-self:center;}

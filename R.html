@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="R.css">
+    <title>Registration Page</title>
+</head>
+<body>
+    <div id="form">
+        <header>Registration Form</header><hr id="header">
+        <label for="">Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <input type="text" id="name"></label><br>
+        <label for="">Email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <input type="emsil" id="email"></label><br>
+        <label for="">Password : <input type="password" id="password"></label><br>
+        <input type="button" value="Submit" onclick="save(event)" id="submit">
+        <a id="msg" style="color:red"></a>
+        <hr>
+        <a href="login.html">Login</a>
+    </div>
+    <ul id="adduser"></ul>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js"></script>
+    <script src="R.js"></script>
+</body>
+</html>
